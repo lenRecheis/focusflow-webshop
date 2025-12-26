@@ -1,0 +1,137 @@
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - FocusFlow</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Design-System (Konsistent zu den anderen Seiten) */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #212529;
+            --primary-color: #0056b3; 
+            --accent-color: #d9534f;
+            --focus-outline: 3px solid #ffbf47;
+        }
+
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-color); margin: 0; padding: 0; }
+        
+        /* Barrierefreiheit & Fokus */
+        .skip-link { position: absolute; top: -40px; left: 0; background: var(--primary-color); color: white; padding: 8px; z-index: 100; text-decoration: none; }
+        .skip-link:focus { top: 0; }
+        a:focus, button:focus, input:focus, textarea:focus { outline: var(--focus-outline); outline-offset: 2px; }
+
+        /* Header & Navi */
+        header { background-color: #f8f9fa; border-bottom: 1px solid #dee2e6; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); text-decoration: none; }
+        nav ul { list-style: none; display: flex; gap: 20px; padding: 0; }
+        nav a { text-decoration: none; color: var(--text-color); font-weight: 500; }
+
+        /* Hauptinhalt */
+        main { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        
+        h1 { color: var(--primary-color); border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+
+        /* Formular-Design */
+        form { 
+            background: #f8f9fa; 
+            padding: 2rem; 
+            border-radius: 8px; 
+            margin-top: 2rem; 
+            border: 1px solid #dee2e6; 
+        }
+        
+        label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
+        
+        input, textarea { 
+            width: 100%; 
+            padding: 12px; 
+            margin-bottom: 1.5rem; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+            box-sizing: border-box; /* Wichtig damit Padding die Breite nicht sprengt */
+            font-family: inherit;
+        }
+        
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        
+        button:hover { background-color: #004494; }
+
+        /* Footer */
+        footer { background-color: #343a40; color: white; padding: 2rem; margin-top: 3rem; text-align: center;}
+        footer a { color: #ffbf47; }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <header>
+        <a href="index.html" class="logo"><span role="img" aria-label="FocusFlow Logo">⚡ FocusFlow</span></a>
+        <nav aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="about.html">Über uns</a></li>
+                <li><a href="kontakt.html" aria-current="page" style="font-weight: bold; text-decoration: underline;">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <h1>Kontaktieren Sie uns</h1>
+        <p>Haben Sie Fragen zu unseren Lizenzen, Interesse an einer Enterprise-Lösung oder technischen Supportbedarf? Unser Team in Wien ist für Sie da.</p>
+
+        <form action="#" method="post">
+            <label for="name">Ihr Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Max Mustermann">
+
+            <label for="email">Ihre E-Mail-Adresse</label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="max@beispiel.com">
+
+            <label for="message">Ihre Nachricht</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Wie können wir Ihnen helfen?"></textarea>
+
+            <button type="submit">Nachricht absenden</button>
+            
+            <p style="font-size: 0.8rem; margin-top: 1rem; color: #666;">
+                Mit dem Absenden dieses Formulars erklären Sie sich mit der Verarbeitung Ihrer angegebenen Daten zwecks Bearbeitung Ihrer Anfrage gemäß unserer <a href="datenschutz.html">Datenschutzerklärung</a> einverstanden.
+            </p>
+        </form>
+
+        <div style="margin-top: 3rem; border-top: 1px solid #eee; padding-top: 2rem;">
+            <h2>Postanschrift & Erreichbarkeit</h2>
+            <p><strong>FocusFlow Digital GmbH</strong><br>
+            Musterstraße 1<br>
+            1010 Wien, Österreich</p>
+            
+            <p>
+                <strong>E-Mail:</strong> <a href="mailto:support@focusflow.at">support@focusflow.at</a><br>
+                <strong>Telefon:</strong> +43 1 12345678 (Mo-Fr, 09:00 - 17:00 Uhr)
+            </p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FocusFlow Digital GmbH</p>
+        <p>
+            <a href="kontakt.html">Impressum</a> | 
+            <a href="datenschutz.html">Datenschutz</a>
+        </p>
+    </footer>
+
+</body>
+</html>

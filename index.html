@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="de"> 
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>FocusFlow - Smartes Zeitmanagement</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Grundeinstellungen */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #212529;
+            --primary-color: #0056b3; 
+            --accent-color: #d9534f;
+            --focus-outline: 3px solid #ffbf47; /* Sehr gut sichtbarer Fokus-Rahmen */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Skip-Link für Tastaturnutzer (wird nur bei Fokus sichtbar) */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            text-decoration: none;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Fokus-Management: Niemals "outline: none" ohne Ersatz machen! */
+        a:focus, button:focus, input:focus {
+            outline: var(--focus-outline);
+            outline-offset: 2px;
+        }
+
+        /* Styles für Medien */
+        .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .video-container {
+            width: 100%; 
+            margin: 2rem 0;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden; 
+        }
+        video { 
+            width: 100%; 
+            height: auto;   /* WICHTIG: Das verhindert den Zoom/Cut-off */
+            display: block; 
+            object-fit: contain; 
+        }
+
+        /* Layout */
+        header {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        /* Semantische Abschnitte */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        /* Entfernt die Punkte in der Credits-Liste */
+        .credits ul {
+            list-style: none; /* Das killt die Punkte */
+            padding: 0;       /* Das entfernt den linken Einzug */
+            margin: 0;
+        }
+        
+        .credits li {
+            margin-bottom: 0.5rem; /* Etwas Abstand zwischen den Zeilen */
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: #ffbf47; /* Gelb auf Dunkelgrau für Kontrast */
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <header>
+        <a href="index.html" class="logo">
+            <span role="img" aria-label="FocusFlow Logo">⚡ FocusFlow</span>
+        </a>
+        <nav aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#features">Funktionen</a></li>
+                <li><a href="lizenz.html">Lizenz</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section>
+            <h1>Endlich im Flow arbeiten.</h1>
+            
+            <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                 alt="Ein Team arbeitet fokussiert an Laptops in einem modernen Büro" 
+                 class="hero-image">
+            
+            <p>FocusFlow hilft dir und deinem Team helfen Ablenkungen zu blockieren.</p>
+        </section>
+
+        <section id="demo">
+            <h2>Pure Produktivität</h2>
+            <p>Mit dem Deep Work Mode werden Ablenkungen sofort ausgeblendet. Damit absolute Ruhe, wie hier im Video zu sehen ist garantiert wird.</p>
+            
+            <div class="video-container">
+                <video controls poster="https://images.pexels.com/videos/853789/free-video-853789.jpg?auto=compress&cs=tinysrgb&w=800">
+                    <source src="https://videos.pexels.com/video-files/853789/853789-hd_1920_1080_25fps.mp4" type="video/mp4">
+                    Dein Browser unterstützt das Video-Tag nicht.
+                </video>
+            </div>
+        </section>
+
+        <section id="features" style="margin-top: 3rem;">
+            <h2>Warum FocusFlow?</h2>
+            <article>
+                <h3>Deep Work Mode</h3>
+                <p>Blockiere Social Media mit einem Klick.</p>
+            </article>
+            <article>
+                <h3>Team-Sync</h3>
+                <p>Lass Projektrelevante Mitglieder wissen wann du verfügbar bist.</p>
+            </article>
+            <article>
+                <h3>Analytics Dashboard</h3>
+                <p>Visualisiert deine Produktivität und hilft dir deine Ziele besser zu erreichen.</p>
+            </article>
+        </section>
+
+        <section id="a11y-statement" style="margin-top: 3rem; background: #f0f0f0; padding: 1rem;">
+            <h2>Barrierefreiheitserklärung</h2>
+            <p>Die FocusFlow Digital GmbH ist bemüht, ihren Webauftritt im Einklang mit dem Web-Zugänglichkeits-Gesetz (WZG) barrierefrei zugänglich zu machen. Diese Erklärung zur Barrierefreiheit gilt für die Website www.focusflow.at (fiktiv).</p>
+            
+            <h3>Stand der Vereinbarkeit mit den Anforderungen</h3>
+            <p>Diese Website ist mit <strong>WCAG 2.2 Stufe AA</strong> vollständig vereinbar.</p>
+            
+            <h3>Maßnahmen</h3>
+            <ul>
+                <li>Verwendung von semantischem HTML.</li>
+                <li>Hohe Kontrastwerte bei Texten und Elementen.</li>
+                <li>Vollständige Tastaturbedienbarkeit.</li>
+                <li>Skalierbare Schriftgrößen.</li>
+            </ul>
+
+            <h3>Feedback und Kontakt</h3>
+            <p>Sollten Ihnen Mängel in Bezug auf die Barrierefreiheit auffallen, kontaktieren Sie uns bitte unter: <a href="mailto:support@focusflow.at">support@focusflow.at</a>.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        
+
+        <div class="credits">
+            <h4>Urheberrechtshinweise & Bildnachweis</h4>
+            <p>Die auf dieser Website verwendeten Medien wurden unter Einhaltung der jeweiligen Lizenzbedingungen genutzt:</p>
+            <ul>
+                <li><strong>Schriftart "Inter":</strong> <a href="https://scripts.sil.org/OFL" target="_blank">SIL Open Font License</a>, via Google Fonts.</li>
+                <li><strong>Foto (Header):</strong> "Meeting" von <em>Fauxels</em> via Pexels.com. <a href="https://www.pexels.com/license/" target="_blank">Pexels Lizenz</a> (Frei für kommerzielle Nutzung).</li>
+                <li><strong>Video (Demo):</strong> "Typing on Laptop" via Pexels.com. <a href="https://www.pexels.com/license/" target="_blank">Pexels Lizenz</a>.</li>
+                <li><strong>Texte & Grafiken:</strong> © 2025 FocusFlow Digital GmbH. Alle Rechte vorbehalten.</li>
+            </ul>
+        </div>
+        <p>&copy; 2025 FocusFlow Digital GmbH</p>
+        <p>
+            <a href="kontakt.html">Impressum</a> | 
+            <a href="datenschutz.html">Datenschutz</a>
+        </p>
+    </footer>
+    <div id="cookie-banner" style="
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #212529;
+    color: white;
+    padding: 1.5rem;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    text-align: center;
+    border-top: 4px solid #0056b3;
+">
+    <p style="margin: 0 0 1rem 0; max-width: 800px;">
+        <strong>Wir schätzen deine Privatsphäre.</strong><br>
+        Wir nutzen Cookies und Tracking-Technologien ("FocusFlow Analytics"), um unsere Webseite für dich zu optimieren. 
+        Weitere Informationen findest du in unserer <a href="datenschutz.html" style="color: #ffbf47;">Datenschutzerklärung</a>.
+    </p>
+    <div style="display: flex; gap: 10px;">
+        <button onclick="document.getElementById('cookie-banner').style.display='none'" style="
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        ">Alle akzeptieren</button>
+        
+        <button onclick="document.getElementById('cookie-banner').style.display='none'" style="
+            background-color: transparent;
+            color: #ccc;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        ">Nur Essenzielle</button>
+    </div>
+</div>
+</body>
+</html>

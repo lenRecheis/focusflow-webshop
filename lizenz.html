@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lizenz & Nutzungsbedingungen - FocusFlow</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Das bekannte Design-System (Konsistent zu index.html) */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #212529;
+            --primary-color: #0056b3; 
+            --accent-color: #d9534f;
+            --focus-outline: 3px solid #ffbf47;
+        }
+
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-color); margin: 0; padding: 0; }
+        
+        .skip-link { position: absolute; top: -40px; left: 0; background: var(--primary-color); color: white; padding: 8px; z-index: 100; text-decoration: none; }
+        .skip-link:focus { top: 0; }
+        a:focus { outline: var(--focus-outline); outline-offset: 2px; }
+
+        header { background-color: #f8f9fa; border-bottom: 1px solid #dee2e6; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); text-decoration: none; }
+        nav ul { list-style: none; display: flex; gap: 20px; padding: 0; }
+        nav a { text-decoration: none; color: var(--text-color); font-weight: 500; }
+
+        main { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        
+        h1, h2 { color: var(--primary-color); border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+        h3 { margin-top: 2rem; color: #444; }
+
+        .legal-box {
+            background: #f9f9f9;
+            border-left: 5px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .alert-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        footer { background-color: #343a40; color: white; padding: 2rem; margin-top: 3rem; text-align: center;}
+        footer a { color: #ffbf47; }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <header>
+        <a href="index.html" class="logo"><span role="img" aria-label="FocusFlow Logo">⚡ FocusFlow</span></a>
+        <nav aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="about.html">Über uns</a></li>
+                <li><a href="lizenz.html" aria-current="page" style="font-weight: bold; text-decoration: underline;">Lizenz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <h1>Lizenz- und Nutzungsvereinbarung</h1>
+        <p>Stand: 26. Dezember 2024</p>
+        <p>Durch den Erwerb eines Abonnements oder die Nutzung der kostenlosen Version von "FocusFlow" stimmen Sie den folgenden Lizenzbedingungen der FocusFlow Digital GmbH zu.</p>
+
+        <h2>1. Einräumung von Nutzungsrechten</h2>
+        <p>Mit vollständiger Bezahlung der Abonnementgebühr (bzw. bei Registrierung im Free-Tier) gewährt Ihnen der Anbieter das folgende Recht:</p>
+        <div class="legal-box">
+            <ul>
+                <li><strong>Art des Rechts:</strong> Ein einfaches, nicht ausschließliches, nicht übertragbares und zeitlich auf die Dauer des Abonnements beschränktes Nutzungsrecht.</li>
+                <li><strong>Umfang:</strong> Zugriff auf die Software über das Internet (SaaS) für die vereinbarte Anzahl an Nutzern (Seats).</li>
+                <li><strong>Zweck:</strong> Die Nutzung darf ausschließlich für eigene geschäftliche oder private Zwecke erfolgen.</li>
+            </ul>
+        </div>
+
+        <h2>2. Rechtevorbehalt und Eigentum</h2>
+        <p>Die Software wird lizenziert, nicht verkauft. Alle Rechte, die Ihnen nicht ausdrücklich eingeräumt wurden, verbleiben bei der FocusFlow Digital GmbH.</p>
+        
+        <h3>2.1 Geistiges Eigentum</h3>
+        <p>Sämtliche Urheberrechte, Markenrechte (siehe "Über uns"), Patente und Geschäftsgeheimnisse an der Software, dem Quellcode, den Algorithmen und dem Design verbleiben uneingeschränkt beim Anbieter.</p>
+
+        <h3>2.2 Verbote</h3>
+        <p>Dem Nutzer ist es ausdrücklich untersagt:</p>
+        <ul>
+            <li>Die Software zurückzuentwickeln (Reverse Engineering), zu dekompilieren oder den Quellcode abzuleiten.</li>
+            <li>Teile der Software zu kopieren, um ein Konkurrenzprodukt zu erstellen.</li>
+            <li>Zugangsdaten an Dritte weiterzugeben (Account-Sharing).</li>
+        </ul>
+
+        <h2>3. Gewährleistung und Haftungsbeschränkung</h2>
+        
+        <h3>3.1 Verfügbarkeit</h3>
+        <p>Wir bemühen uns um eine Verfügbarkeit von 99% im Jahresmittel, können jedoch keine ständige, ununterbrochene Verfügbarkeit garantieren (z.B. wegen Wartungsarbeiten oder Serverausfällen).</p>
+
+        <div class="alert-box">
+            <h3>3.2 Haftungsbegrenzung</h3>
+            <p>Für Schäden haften wir nur nach folgenden Maßgaben:</p>
+            <ul>
+                <li><strong>Unbeschränkte Haftung:</strong> Bei Vorsatz, grober Fahrlässigkeit sowie bei Verletzung von Leben, Körper oder Gesundheit.</li>
+                <li><strong>Beschränkte Haftung:</strong> Bei leichter Fahrlässigkeit haften wir nur bei Verletzung wesentlicher Vertragspflichten (Kardinalpflichten), und zwar begrenzt auf den vertragstypischen, vorhersehbaren Schaden.</li>
+                <li><strong>Datenverlust:</strong> Für den Verlust von Daten haften wir nicht, sofern dieser durch regelmäßige Backups des Nutzers hätte vermieden werden können.</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 FocusFlow Digital GmbH</p>
+        <p>
+            <a href="kontakt.html">Impressum</a> | 
+            <a href="datenschutz.html">Datenschutz</a>
+        </p>
+    </footer>
+
+</body>
+</html>

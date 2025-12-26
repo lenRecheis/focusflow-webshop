@@ -1,0 +1,173 @@
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns & Marken - FocusFlow</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Design-System (Konsistent zu index.html) */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #212529;
+            --primary-color: #0056b3; 
+            --accent-color: #d9534f;
+            --focus-outline: 3px solid #ffbf47;
+        }
+
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-color); margin: 0; padding: 0; }
+        
+        .skip-link { position: absolute; top: -40px; left: 0; background: var(--primary-color); color: white; padding: 8px; z-index: 100; text-decoration: none; }
+        .skip-link:focus { top: 0; }
+        a:focus, button:focus { outline: var(--focus-outline); outline-offset: 2px; }
+
+        header { background-color: #f8f9fa; border-bottom: 1px solid #dee2e6; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); text-decoration: none; }
+        nav ul { list-style: none; display: flex; gap: 20px; padding: 0; }
+        nav a { text-decoration: none; color: var(--text-color); font-weight: 500; }
+
+        main { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        
+        h1, h2 { color: var(--primary-color); }
+        
+        .brand-box {
+            border: 1px solid #dee2e6;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            background: #f8f9fa;
+        }
+
+        .brand-type {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            color: #666;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .brand-visual {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 1rem 0;
+            display: inline-block;
+        }
+
+        footer { background-color: #343a40; color: white; padding: 2rem; margin-top: 3rem; text-align: center;}
+        footer a { color: #ffbf47; }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <header>
+        <a href="index.html" class="logo"><span role="img" aria-label="FocusFlow Logo">⚡ FocusFlow</span></a>
+        <nav aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="about.html" aria-current="page" style="font-weight: bold; text-decoration: underline;">Über uns</a></li>
+                <li><a href="lizenz.html">Lizenz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <h1>Über FocusFlow</h1>
+        <p>Wir sind ein Start-Up aus Wien, das sich der Produktivität verschrieben hat. Unsere Mission ist es, Teams dabei zu helfen, ihren "Flow" zu finden und Ablenkungen zu minimieren.</p>
+
+        <h2 style="margin-top: 3rem;">Unsere Markenidentität</h2>
+        <p>Um unsere Identität zu schützen und Verwechslungen zu vermeiden, nutzen wir folgende eingetragene Marken:</p>
+
+        <div class="brand-box">
+            <span class="brand-type">Markenform 1: Wortmarke</span>
+            <div class="brand-visual">FocusFlow</div>
+            <p><strong>Bedeutung:</strong> Der Kernname unseres Unternehmens und Produkts.</p>
+            <p><strong>Nizza-Klassen:</strong></p>
+            <ul>
+                <li><strong>Klasse 9:</strong> Herunterladbare Software für Zeitmanagement.</li>
+                <li><strong>Klasse 42:</strong> Software as a Service (SaaS).</li>
+            </ul>
+        </div>
+
+        <div class="brand-box">
+            <span class="brand-type">Markenform 2: Bildmarke</span>
+            <div class="brand-visual" style="color: #0056b3;">⚡</div>
+            <p><strong>Bedeutung:</strong> Das "Energie-Symbol" (Blitz), das für schnellen Fokus steht. Wird als App-Icon und Favicon verwendet.</p>
+            <p><strong>Nizza-Klassen:</strong> Klasse 9 (App-Icons).</p>
+        </div>
+
+        <div class="brand-box">
+            <span class="brand-type">Markenform 3: Slogan (Wortmarke)</span>
+            <div class="brand-visual" style="font-style: italic;">"Reclaim your Focus."</div>
+            <p><strong>Bedeutung:</strong> Unser zentrales Leistungsversprechen an den Kunden.</p>
+            <p><strong>Nizza-Klassen:</strong> Klasse 35 (Werbung & Marketing).</p>
+        </div>
+
+        <h3>Markenrechtliche Prüfung</h3>
+        <p>Vor der Eintragung haben wir sichergestellt, dass keine Markenrechte Dritter verletzt werden:</p>
+        <ul>
+            <li><strong>Wortwahl:</strong> Prüfung via <em>TMview</em> und <em>EUIPO eSearch</em> ergab keine Treffer für "FocusFlow" im Bereich Software in der EU.</li>
+            <li><strong>Bildwahl:</strong> Das Blitz-Symbol ist generisch genug gestaltet, um keine spezifischen Bildrechte anderer Firmen zu verletzen.</li>
+            <li><strong>Farbwahl:</strong> Wir verzichten auf eine Farbmarke, nutzen aber Blau (#0056b3) als Corporate Design.</li>
+        </ul>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FocusFlow Digital GmbH</p>
+        <p>
+            <a href="kontakt.html">Impressum</a> | 
+            <a href="datenschutz.html">Datenschutz</a>
+        </p>
+    </footer>
+
+    <div id="cookie-banner" style="
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #212529;
+        color: white;
+        padding: 1.5rem;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1000;
+        text-align: center;
+        border-top: 4px solid #0056b3;
+    ">
+        <p style="margin: 0 0 1rem 0; max-width: 800px;">
+            <strong>Wir schätzen deine Privatsphäre.</strong><br>
+            Wir nutzen Cookies, um unsere Webseite für dich zu optimieren. 
+            Weitere Informationen findest du in unserer <a href="datenschutz.html" style="color: #ffbf47;">Datenschutzerklärung</a>.
+        </p>
+        <div style="display: flex; gap: 10px;">
+            <button onclick="document.getElementById('cookie-banner').style.display='none'" style="
+                background-color: #0056b3;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-weight: bold;
+            ">Alle akzeptieren</button>
+            
+            <button onclick="document.getElementById('cookie-banner').style.display='none'" style="
+                background-color: transparent;
+                color: #ccc;
+                border: 1px solid #ccc;
+                padding: 10px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+            ">Nur Essenzielle</button>
+        </div>
+    </div>
+
+</body>
+</html>
